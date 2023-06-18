@@ -18,3 +18,12 @@ enum SocialMedia {
 
 const social = SocialMedia.instagram;
 console.log(social);
+
+enum Role {
+  Admin = "d",
+  User = "f",
+}
+
+function testRole(role: Role) {}
+
+testRole(Role.Admin);
