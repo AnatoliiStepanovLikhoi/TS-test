@@ -51,3 +51,35 @@ const id2: ID = "1234";
 // const id3: ID = true;
 
 type SomeType = string | null | undefined;
+
+//Own Types
+
+let ageWithType: number = 22;
+ageWithType = 18;
+
+let testBoolean: boolean;
+testBoolean = true;
+
+let testStringOrNumber: string | number;
+
+testStringOrNumber = 10;
+testStringOrNumber = "10";
+
+//Arrays
+
+let names = ["john", "sara", "tom"];
+names.push("vova");
+
+let numbers = [11, 17, 35];
+// numbers.push("mike");
+numbers.push(13);
+
+let testStringArray: string[];
+// testStringArray = [1, 2, 3];
+testStringArray = ["john", "sara", "tom"];
+
+let testNumberArray: number[];
+testNumberArray = [1, 2, 3];
+
+let testStringOrNumberArray: (string | number)[];
+testStringOrNumberArray = [1, "two", 3];
