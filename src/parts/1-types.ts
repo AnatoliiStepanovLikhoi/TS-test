@@ -83,3 +83,55 @@ testNumberArray = [1, 2, 3];
 
 let testStringOrNumberArray: (string | number)[];
 testStringOrNumberArray = [1, "two", 3];
+
+//Objects
+
+let user = {
+  name: "john",
+  age: 22,
+  isAdmin: false,
+};
+user.name = "jane";
+// user.age = "twenty two";
+user.age = 22;
+// user.isAdmin = 'no'
+user.isAdmin = false;
+
+// user.phone = "0442400240";
+
+let userObj: {
+  name: string;
+  age: number;
+  isAdmin: boolean;
+};
+
+userObj = {
+  name: "john",
+  age: 23,
+  isAdmin: true,
+};
+
+let userObj2: {
+  name: string;
+  age: number;
+  isAdmin: boolean;
+  phone?: string;
+};
+
+userObj2 = {
+  name: "john",
+  age: 23,
+  isAdmin: true,
+  phone: "0442400240",
+};
+
+//ANY
+
+let testAny: any;
+
+testAny = 12;
+testAny = "Hello";
+testAny = [true];
+
+let testAnyArray: any[];
+testAnyArray = [1, "two", false, []];
