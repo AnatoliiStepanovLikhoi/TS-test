@@ -73,3 +73,22 @@ const css = {
   marginTop: "2px",
   borderRadius: "5px",
 };
+
+//Interface
+
+interface IUser {
+  name: string;
+  email: string;
+  age: number;
+}
+
+interface IEmployee extends IUser {
+  employeeId: number;
+}
+
+const emp: IEmployee = {
+  name: "tom",
+  email: "tom@gmail.com",
+  age: 43,
+  employeeId: 1,
+};

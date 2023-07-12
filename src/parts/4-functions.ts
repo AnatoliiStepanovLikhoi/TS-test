@@ -59,4 +59,32 @@ let sum = (num1: number, num2: number, another?: number) => {
   return num1 + num2;
 };
 
-console.log(sum(2, 3));
+console.log(sum(2, 4));
+
+//Type Aliases
+
+type UserType = {
+  name: string;
+  age: number;
+  phone?: string;
+};
+let betterFunc = (user: UserType) => {
+  console.log(user.name);
+};
+
+type myFunc = (a: number, b: string) => void;
+let write: myFunc = (num, str) => {
+  console.log(num + "times" + str);
+};
+
+type UserType2 = {
+  name: string;
+  age: number;
+  phone?: string;
+  theme: "dark" | "light";
+};
+const userWithTheme: UserType2 = {
+  name: "Vova",
+  age: 43,
+  theme: "dark",
+};
