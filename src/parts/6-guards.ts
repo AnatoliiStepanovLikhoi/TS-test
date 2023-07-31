@@ -38,3 +38,27 @@ function setAlertType(type: AlertType) {
 
 setAlertType("success");
 // setAlertType('default')
+
+//==============
+
+interface User777 {
+  name: string;
+}
+interface Human extends User777 {
+  speak(): void;
+}
+
+interface Animal extends User777 {
+  color: string;
+}
+
+const serverInfo: Human = {
+  name: "Vovka",
+  speak: () => {
+    console.log("Hello");
+  },
+};
+
+function isHuman(serverInfo: User777): serverInfo is Human {
+  return typeof (serverInfo as Human).speak === "function";
+}
