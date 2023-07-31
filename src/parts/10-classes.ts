@@ -70,4 +70,28 @@ const mySuperCustomer = new Customer({
   },
 });
 
-console.log(mySuperCustomer.getBill());
+// console.log(mySuperCustomer.getBill());
+
+// * Implements & extends
+
+interface Person123 {
+  name: string;
+  surname: string;
+}
+
+interface PersonAddInfo {
+  birthday: string;
+  age: number;
+}
+
+interface Person12 extends Person123, PersonAddInfo {
+  height: number;
+}
+
+const newExtraUser: Person12 = {
+  height: 10,
+  birthday: "June 12",
+  age: 12,
+  name: "Vova",
+  surname: "Golova",
+};
