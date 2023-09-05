@@ -135,3 +135,20 @@ testAny = [true];
 
 let testAnyArray: any[];
 testAnyArray = [1, "two", false, []];
+
+/// Types annotation
+
+let bool: boolean;
+
+bool = true;
+
+// const x = new Date;
+
+// let score: number | string; //union
+
+type Score = number | string;
+
+const myScore1: Score = "10";
+
+let x: number = JSON.parse("6");
+let str: string = JSON.parse("dfevev");
