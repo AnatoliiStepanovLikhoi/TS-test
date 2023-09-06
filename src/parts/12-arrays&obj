@@ -1,0 +1,108 @@
+//lists
+
+const arr: string[] = ["a", "b", "c"];
+
+let el = arr[0];
+let el2 = arr.pop();
+
+const arr1: Array<number> = [1, 4];
+
+const arr2: string[][] = [];
+arr2.push(["a", "b"]);
+
+type MyType = string | number;
+const arr3: MyType[] = [];
+
+//tuples
+
+const tuple1: [string, boolean, number] = ["abc", true, 0];
+
+//csv
+type SimpleCsv = [string, string, number];
+const example: SimpleCsv[] = [["str", "st", 32]];
+
+//objects
+
+type MyType1 = {
+  a: number;
+  b: number;
+  c: string;
+};
+
+interface MyObject {
+  readonly a: number;
+  b: number;
+  c?: string;
+  //   print?: () => void;
+  [key: string]: string | number | undefined;
+}
+
+const obj: MyObject = { a: 1, b: 2, c: "cfds", e: 20 };
+
+const obj2: MyObject = {
+  a: 2,
+  b: 3,
+  c: "rgrgg",
+};
+
+obj2.c = "new value" as string;
+
+const c: string = obj2.c ?? "";
+
+obj2.b = 23;
+
+interface Person {
+  name: string;
+}
+
+interface Person {
+  age: number;
+}
+
+const john: Person = {
+  name: "John",
+  age: 40,
+};
+
+interface IAccount {
+  login: string;
+}
+
+// const myAcc: IAccount = {
+//   login: "Leehao",
+// };
+
+interface IAccount {
+  email: string;
+  login: string;
+  active: boolean;
+}
+
+interface IDeveloper extends Person, IAccount {
+  skills: string[];
+  level?: string;
+}
+
+const john2: IDeveloper = {
+  name: "John",
+  age: 40,
+  email: "",
+  login: "",
+  active: false,
+  skills: ["typescript", "javascript"],
+};
+
+type TPerson = {
+  name: string;
+  age: number;
+};
+
+type TAccount = {
+  email: string;
+  login: string;
+  active: boolean;
+};
+
+type FrontendDeveloper = TPerson & TAccount;
+
+const devArr: FrontendDeveloper[] = [];

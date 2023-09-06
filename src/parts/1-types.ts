@@ -151,4 +151,4 @@ type Score = number | string;
 const myScore1: Score = "10";
 
 let x: number = JSON.parse("6");
-let str: string = JSON.parse("dfevev");
+let str: string = JSON.parse('{"result":true, "count":42}');
