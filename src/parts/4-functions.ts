@@ -88,3 +88,68 @@ const userWithTheme: UserType2 = {
   age: 43,
   theme: "dark",
 };
+
+///Functions
+
+const fn1 = (num: number): string => {
+  return String(num);
+};
+
+type Callback = (num: number) => string;
+
+function fn2(cb?: Callback) {
+  if (cb === undefined) {
+    cb = String;
+  }
+
+  cb(12);
+}
+
+function createPoint(x = 0, y = 0): [number, number] {
+  return [x, y];
+}
+
+createPoint(10);
+
+function fn3(...nums: number[]): string {
+  return nums.join("-");
+}
+
+interface Printable {
+  label: string;
+}
+
+function printReport(obj: Printable): void {
+  console.log(obj.label);
+}
+
+const drink = {
+  label: "coke",
+  price: 90,
+};
+
+const phone = {
+  label: "Nokia",
+  price: 1000,
+};
+
+printReport(drink);
+printReport(phone);
+
+// printReport({ label: "", price: 100 });
+
+//Reloads
+
+function pickCard(x: number): { suit: string; card: number };
+function pickCard(x: number | { suit: string; card: number }[]): number;
+
+function pickCard(x): any {
+  if (typeof x === "object") {
+    let card = Math.floor(Math.random() * x.length);
+    return card;
+  } else if (typeof x === "number") {
+    return { suit: "", card: x % 13 };
+  }
+}
+
+pickCard([{ suit: "abc", card: 5 }]);
